@@ -1,7 +1,10 @@
 /**
  * Created by jann551c on 21/10/15.
  */
-"use strict";
+(function(){
 
-var mediaApp = angular.module("mediaApp",[]
-);
+    "use strict";
+
+    var mediaApp = angular.module("mediaApp",[]);
+
+})();
