@@ -3,4 +3,5 @@
  */
 "use strict";
 
-var mediaApp = angular.module('mediaApp',[]);
+var mediaApp = angular.module("mediaApp",[]
+);
