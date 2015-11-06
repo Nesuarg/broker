@@ -1,8 +1,188 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html, body {
+  margin: 0;
+  height: 100%;
 }
 
-a {
-  color: #00B7FF;
+body {
+  position: relative;
+  background-color: rgb(112,193,189);
+  font-family: 'Roboto', serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(95,56,82);
+}
+h1 {
+  padding: 5rem 0;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: rgb(95,56,82);
+}
+
+
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgb(239,236,215);
+
+}
+
+ul, li, p {
+  text-decoration: none;
+  list-style: none;
+  text-transform: none;
+}
+
+hr {
+  border-top: 2px solid rgb(95,56,82);
+}
+
+.nav-pills {
+  padding-right: 15px;
+}
+
+.navbar-right {
+  padding-right: 15px;
+}
+
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+body {
+  padding-top: 50px;
+  background-color: #f5f5f5;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #fff;
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -33%;
+  }
+
+  .row-offcanvas-left.active {
+    left: 33%;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 33%;
+    margin-left: 10px;
+  }
+}
+
+
+/* Sidebar navigation */
+.nav-sidebar {
+  background-color: #f5f5f5;
+  margin-right: -15px;
+  margin-bottom: 20px;
+  margin-left: -15px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a {
+  color: #fff;
+  background-color: #428bca;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+#instafeed {
+@include column-width(10em);
+@include column-gap(0);
+}
+
+#instafeed img {
+  margin: 0 0 -3px;
+  display: inline;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.navbar {
+  background-color: #444444;
+
+}
+
+.navbar a {
+   color: #f5f5f5;
+
+ }
+
+.nav-sidebar li > a:hover{
+  background-color: #428bca;
+  color: white;
+}
+
+.nav-sidebar li > a:focus{
+  background-color: #428bca;
+  color: white;
+}
+
+.active{
+  background-color: #428bca;
+  color: white;
+}
+
+#fileID {
+
+  visibility: hidden;
+  position: absolute;
+}
+
+#fileI {
+  background-color: #428bca;
+  width: 150px;
+  padding: 5px;
+  color: white;
+
+
+}
+
+#fileI:hover {
+  text-decoration: none;
+}
+

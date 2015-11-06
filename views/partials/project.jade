@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  h1= title
+  form(name="project", action="/project", method="post")
+    input(type="text", name="memberName")
+    input(type="text", name="projectName")
+    input(type="submit", value="create")
