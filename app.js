@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret: 'supernova', saveUninitialized: true, resave: true}));
-/* app.use(passport.initialize());
+app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(function(req, res, next){
@@ -42,7 +42,7 @@ app.use(function(req, res, next){
     if (success) res.locals.success = success;
 
     next();
-}); */
+});
 
 
 //mongoose.connect('mongodb://localhost:27017/broker');
@@ -66,7 +66,7 @@ passport.use(new LocalStrategy(
     }
 ));
 
-/* passport.serializerUser(function(user, done){
+passport.serializerUser(function(user, done){
     if(user){
         done(null, user._id);
     }
@@ -81,7 +81,7 @@ passport.deserializerUser(function(id, user){
         }
 
     })
-}); */
+});
 
 app.use('/', routes);
 app.use('/users', users);
